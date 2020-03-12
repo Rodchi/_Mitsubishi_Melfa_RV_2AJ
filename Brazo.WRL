@@ -1,0 +1,369 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+PointLight {
+	ambientIntensity	0.1
+	intensity	0.5
+	location	-2.30865 18.1697 2.19093e+006
+	radius	50
+}
+PointLight {
+	ambientIntensity	3.3
+	attenuation	0 1 0
+	intensity	1
+	location	8.37635 2.10234 -5.41172
+	radius	100.3
+}
+PointLight {
+	ambientIntensity	3.3
+	attenuation	0 1 0
+	intensity	1
+	location	-6.47218 1.91403 3.83769
+	radius	100.3
+}
+DEF Piso Transform {
+	translation	0 -0.8 0
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.2
+				diffuseColor	1 1 1
+				specularColor	1 1 1
+			}
+
+			texture	NULL
+		}
+
+		geometry	Box {
+			size	10 0.1 10
+		}
+
+	}
+}
+DEF Atras Viewpoint {
+	orientation	-0.011143 0.999933 -0.00322084  4.73283
+	position	-6.92262 1.2591 -0.0970603
+	description	"Atras"
+}
+DEF Superior Viewpoint {
+	orientation	-0.55381 -0.575347 -0.601889  2.09267
+	position	0.439561 8.6684 0.427474
+	description	"Superior"
+}
+DEF Frente Viewpoint {
+	position	0.448 1.305 10.6767
+	description	"Frente"
+}
+DEF Brazo_3Grados Transform {
+	children [ 
+	    DEF Grado1 Transform {
+		    center	0 -0.85 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 0.0408163 0.0408163
+					    specularColor	0.984314 0.984314 0.984314
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	1.7
+				    radius	0.6
+			    }
+
+		    }
+	    }
+
+	    DEF Grado2 Transform {
+		    translation	1.204 1.5 0
+		    center	-1.204 0 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0.0223017 0.8 0.139417
+						specularColor	1 1 1
+					}
+
+				}
+
+				geometry	Box {
+					size	3 0.4 0.4
+				}
+
+			}
+
+			DEF Rotor2 Transform {
+				translation	1.7 0 0.136
+				rotation	0.587967 -0.571968 -0.571968  2.07855
+				scale	0.2033 0.0642 0.2353
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.0936063 0.13705 0.8
+						}
+
+					}
+
+					geometry	Extrusion {
+						beginCap	TRUE
+						endCap	TRUE
+						ccw	TRUE
+						convex	TRUE
+						creaseAngle	0
+						solid	TRUE
+						crossSection	[ 1 1,
+								  0.33897 -6.85453e-005,
+								  -0.402475 0.00206812,
+								  -1 1,
+								  1 1 ]
+						orientation	[ 0 0 1  0,
+								  0 0 1  0 ]
+						scale	[ 1 1,
+								  1 1 ]
+						spine	[ 0 0 0,
+								  0 1 0 ]
+					}
+
+				}
+			}
+
+			DEF Rotor3 Transform {
+				translation	1.7 0 -0.2
+				rotation	0.583113 -0.574437 -0.574458  2.0858
+				scale	0.2033 0.0642 0.2353
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.0936063 0.13705 0.8
+						}
+
+					}
+
+					geometry	Extrusion {
+						beginCap	TRUE
+						endCap	TRUE
+						ccw	TRUE
+						convex	TRUE
+						creaseAngle	0
+						solid	TRUE
+						crossSection	[ 1 1,
+								  0.314282 -0.0374196,
+								  -0.379025 -0.0103499,
+								  -1 1,
+								  1 1 ]
+						orientation	[ 0 0 1  0,
+								  0 0 1  0 ]
+						scale	[ 1 1,
+								  1 1 ]
+						spine	[ 0 0 0,
+								  0 1 0 ]
+					}
+
+				}
+			}
+
+			DEF Grado3 Transform {
+				translation	1.704 -0.288 0
+				scale	1 0.5 1.2
+				center	0 0.288 0
+				children [ 
+				    Shape {
+					    appearance	Appearance {
+						    material	Material {
+							    ambientIntensity	0.2
+							    diffuseColor	1 0.0408163 0.0408163
+							    specularColor	0.984314 0.984314 0.984314
+						    }
+
+					    }
+
+					    geometry	Box {
+						    size	0.2 1 0.2
+					    }
+
+				    }
+
+				    DEF Pinza Transform {
+					    translation	4.76837e-007 -0.616001 -2.84053e-007
+					    rotation	0 1 0  3.14159
+					    children [ 
+						Shape {
+							appearance	Appearance {
+								material	Material {
+									ambientIntensity	0.2
+									diffuseColor	1 0.0408163 0.0408163
+									specularColor	0.984314 0.984314 0.984314
+								}
+
+							}
+
+							geometry	Cylinder {
+								height	0.2
+								radius	0.4
+							}
+
+						}
+
+						DEF Garra1 Transform {
+							translation	-0.19 -0.616 0.024
+							rotation	-1 0 0  1.53938
+							scale	0.2 0.1 0.5
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										ambientIntensity	0.2
+										diffuseColor	0.0223017 0.8 0.139417
+										specularColor	1 1 1
+									}
+
+								}
+
+								geometry	Extrusion {
+									beginCap	TRUE
+									endCap	TRUE
+									ccw	FALSE
+									convex	TRUE
+									creaseAngle	0
+									solid	TRUE
+									crossSection	[ 0.241485 1.00619,
+											  0.965939 -1.00619,
+											  1 -1,
+											  1 1,
+											  0.241485 1.00619 ]
+									orientation	[ 0 0 1  0,
+											  0 0 1  0 ]
+									scale	[ 1 1,
+											  1 1 ]
+									spine	[ 0 0 0,
+											  0 1 0 ]
+								}
+
+							}
+						}
+
+						DEF Garra1_1 Transform {
+							translation	0.22 -0.616 0.024
+							rotation	-1 0 0  1.53938
+							scale	0.2 0.1 0.5
+							children Shape {
+								appearance	Appearance {
+									material	Material {
+										ambientIntensity	0.2
+										diffuseColor	0.0223017 0.8 0.139417
+										specularColor	1 1 1
+									}
+
+								}
+
+								geometry	Extrusion {
+									beginCap	TRUE
+									endCap	TRUE
+									ccw	FALSE
+									convex	TRUE
+									creaseAngle	0
+									solid	TRUE
+									crossSection	[ -1 1,
+											  -1 -1,
+											  -0.935493 -1.00619,
+											  -0.264701 1.00619,
+											  -1 1 ]
+									orientation	[ 0 0 1  0,
+											  0 0 1  0 ]
+									scale	[ 1 1,
+											  1 1 ]
+									spine	[ 0 0 0,
+											  0 1 0 ]
+								}
+
+							}
+						}
+					    ]
+				    }
+				]
+			}
+		    ]
+	    }
+
+	    DEF Rotor0 Transform {
+		    translation	3.35276e-008 1.38 0.2079
+		    rotation	1 0 0  1.5708
+		    scale	0.456 0.144 0.5279
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.180392 0.576471 0.870588
+					    specularColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0
+				    solid	TRUE
+				    crossSection	[ 1 1,
+						      0 -0.533053,
+						      -1 1,
+						      1 1 ]
+				    orientation	[ 0 0 1  0,
+						      0 0 1  0 ]
+				    scale	[ 1 1,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0 1 0 ]
+			    }
+
+		    }
+	    }
+
+	    DEF Rotor1 Transform {
+		    translation	0 1.3777 -0.3528
+		    rotation	1 0 0  1.5708
+		    scale	0.456 0.144 0.5279
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.180392 0.576471 0.870588
+					    specularColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Extrusion {
+				    beginCap	TRUE
+				    endCap	TRUE
+				    ccw	TRUE
+				    convex	TRUE
+				    creaseAngle	0
+				    solid	TRUE
+				    crossSection	[ 1 1,
+						      0 -0.558816,
+						      -1 1,
+						      1 1 ]
+				    orientation	[ 0 0 1  0,
+						      0 0 1  0 ]
+				    scale	[ 1 1,
+						      1 1 ]
+				    spine	[ 0 0 0,
+						      0 1 0 ]
+			    }
+
+		    }
+	    }
+	]
+}

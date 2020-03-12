@@ -1,0 +1,68 @@
+function []=RectanguloPos(H,W)
+        Pox = -66.60;
+        Poy = -278.78;
+        Poz = 335.53;
+        Pa = -4.88;
+        Pb = 176.48;
+        
+        
+        P1x = Pox;
+        P1y = Poy;
+         
+        P2x = Pox;
+        P2y = Poy + H;
+        P3x = Pox - W;
+        P3y = P2y;
+        P4x = P3x;
+        P4y = P3y - H;
+                
+        P1x = num2str(P1x);
+        P1y = num2str(P1y);
+        P2x = num2str(P2x);
+        P2y = num2str(P2y);
+        P3x = num2str(P3x);
+        P3y = num2str(P3y);
+        P4x = num2str(P4x);
+        P4y = num2str(P4y);
+        Poz = num2str(Poz);
+        Pa = num2str(Pa);
+        Pb = num2str(Pb);
+        
+%         fid = fopen('PuntosRect.txt','wt');
+        inicioP1 = '1;1;EXECMOVP1=(';
+        fin = '0.00)(6,0)';
+        P = strcat(inicioP1,P1x,',',P1y,',',Poz,',',Pa,',',Pb,',',fin,'\n');
+%         fprintf(fid,P);
+        inicioP1 = '1;1;EXECMVRP2=(';
+        fin = '0.00)(6,0)';
+        P = strcat(inicioP2,P2x,',',P2y,',',Poz,',',Pa,',',Pb,',',fin1,'\n');
+        fprintf(fid,P);
+        inicioP1 = '1;1;EXECMVRP1=(';
+        fin = '0.00)(6,0)';
+        P = strcat(inicioP3,P3x,',',P3y,',',Poz,',',Pa,',',Pb,',',fin2,'\n');
+        fprintf(fid,P);
+        inicioP4 = '1;1;CNTLON \n 1;1;SRVON \n 1;1;OVRD=10 \n 1;1;EXECP4=(';
+        fin3 = ',0.00)(6,0) \n 1;1;EXECMOV P4';
+        P = strcat(inicioP4,P4x,',',P4y,',',Poz,',',Pa,',',Pb,',',fin3,'\n');
+        fprintf(fid,P);
+        fclose(fid);
+        
+        fid = fopen('PuntosRect.POS','wt');              
+        inicioP1 = '1;1;CNTLON \n 1;1;SRVON \n 1;1;OVRD=10 \n 1;1;EXECP1=(';
+        fin = ',0.00)(6,0) \n 1;1;EXECMOV P1';
+        P = strcat(inicioP1,P1x,',',P1y,',',Poz,',',Pa,',',Pb,',',fin,'\n');
+        fprintf(fid,P);
+        inicioP2 = '1;1;CNTLON \n 1;1;SRVON \n 1;1;OVRD=10 \n 1;1;EXECP2=(';
+        fin1 = ',0.00)(6,0) \n 1;1;EXECMOV P2';
+        P = strcat(inicioP2,P2x,',',P2y,',',Poz,',',Pa,',',Pb,',',fin1,'\n');
+        fprintf(fid,P);
+        inicioP3 = '1;1;CNTLON \n 1;1;SRVON \n 1;1;OVRD=10 \n 1;1;EXECP3=(';
+        fin2 = ',0.00)(6,0) \n 1;1;EXECMOV P3';
+        P = strcat(inicioP3,P3x,',',P3y,',',Poz,',',Pa,',',Pb,',',fin2,'\n');
+        fprintf(fid,P);
+        inicioP4 = '1;1;CNTLON \n 1;1;SRVON \n 1;1;OVRD=10 \n 1;1;EXECP4=(';
+        fin3 = ',0.00)(6,0) \n 1;1;EXECMOV P4';
+        P = strcat(inicioP4,P4x,',',P4y,',',Poz,',',Pa,',',Pb,',',fin3,'\n');
+        fprintf(fid,P);
+        fclose(fid);
+end
