@@ -1,4 +1,4 @@
-function [invken]=inverseken(x,y,z,beta,alpha)
+function [theta1,theta2,theta3,theta5,theta6]=inverseken(x,y,z,beta,alpha)
 % global error
 % % global error
 % error=0;
@@ -134,4 +134,8 @@ function [invken]=inverseken(x,y,z,beta,alpha)
     theta3 = -theta3;
     theta6 = (beta) - (theta1*cosd(alpha));
     invken=[theta1,theta2,theta3,theta5,theta6];
+    
+    %liburselacome
+    
 end
+%[theta1,theta2,theta3,theta5,theta6]=inverseken(76.8,14.29,701.14,-1.75,96.15)

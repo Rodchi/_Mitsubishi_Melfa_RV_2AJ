@@ -1,0 +1,89 @@
+#VRML V2.0 utf8
+# Created with V-Realm Builder v2.0
+# Integrated Data Systems Inc.
+# www.ids-net.com
+
+DirectionalLight {
+  on FALSE
+  direction 0.00985914 -0.358942 -0.933308
+}
+DirectionalLight {
+  on FALSE
+  direction 0.43468 0.847626 0.304276
+}
+DEF poz Viewpoint {
+  description "poz"
+  position 1 0.235 -1
+  orientation 0 -18 0 8
+}
+WorldInfo {
+  title "Robot
+"
+}
+Background {
+  skyColor [
+    0.76238 0.8 0.1427,
+    0.277798 0.219779 0.7,
+    0.222549 0.390234 0.7,
+    0.60094 0.662637 0.69 
+  ]
+  skyAngle [0.1, 1.2, 1.57]
+  groundColor [
+    0 0.8 0,
+    0.174249 0.82 0.187362,
+    0.467223 0.82 0.445801,
+    0.621997 0.67 0.600279 
+  ]
+  groundAngle [0.9, 1.5, 1.57]
+}
+NavigationInfo {
+}
+Transform {
+  children [
+    DEF b3 Transform {
+      children Inline {
+        url "3brat.wrl" 
+      }
+    }
+    DEF b4 Transform {
+      children Inline {
+        url "4brat.wrl" 
+      }
+    }
+    DEF f Transform {
+      children Inline {
+        url "flansa.wrl" 
+      }
+    }
+    DEF e Transform {
+      children Inline {
+        url "efector.wrl" 
+      }
+    }
+    DEF bb Transform {
+      children Inline {
+        url "baza.wrl" 
+      }
+    }
+    DEF b1 Transform {
+      children Inline {
+        url "1brat.wrl" 
+      }
+    }
+    DEF b2 Transform {
+      children Inline {
+        url "2brat.wrl" 
+      }
+    }
+  ]
+}
+DEF qaz Viewpoint {
+  description "qaz"
+  position -0.0714 0.364 -1.398
+  orientation 0 -0.995019 0.0996814 3.14159
+}
+Viewpoint {
+  description "test"
+  position 0.25 0.2 1.2
+  orientation -1 0 90 0
+}
